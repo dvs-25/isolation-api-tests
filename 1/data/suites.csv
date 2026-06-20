@@ -1,0 +1,18 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","19","[gRPC] Get user details. User with active credit card account","tests.suites.grpc","Sat Jun 20 13:04:57 UTC 2026","passed","Sat Jun 20 13:04:57 UTC 2026","TestGatewayGRPC","test_gateway","",""
+"","557","[gRPC][Kafka] Operation events. In progress purchase operation","tests.suites.grpc","Sat Jun 20 13:04:57 UTC 2026","passed","Sat Jun 20 13:04:57 UTC 2026","TestOperationsGRPC","test_operations","",""
+"","10","[gRPC][Postgres] Filter by account id. Completed purchase operation","tests.suites.grpc","Sat Jun 20 13:04:57 UTC 2026","passed","Sat Jun 20 13:04:57 UTC 2026","TestOperationsGRPC","test_operations","",""
+"","53","[HTTP] Get account details. User with active debit card account","tests.suites.http","Sat Jun 20 13:04:57 UTC 2026","passed","Sat Jun 20 13:04:57 UTC 2026","TestGatewayHTTP","test_gateway","",""
+"","29","[gRPC][Postgres] Filter by card id. In progress purchase operation","tests.suites.grpc","Sat Jun 20 13:04:57 UTC 2026","passed","Sat Jun 20 13:04:57 UTC 2026","TestOperationsGRPC","test_operations","",""
+"","18","[gRPC] Get account details. User with active debit card account","tests.suites.grpc","Sat Jun 20 13:04:57 UTC 2026","passed","Sat Jun 20 13:04:57 UTC 2026","TestGatewayGRPC","test_gateway","",""
+"","15","[HTTP][Postgres] Filter by card id. In progress purchase operation","tests.suites.http","Sat Jun 20 13:04:58 UTC 2026","passed","Sat Jun 20 13:04:58 UTC 2026","TestOperationsHTTP","test_operations","",""
+"
+        Сценарий:
+        Пользователь с активным кредитным счётом
+        запрашивает агрегированные данные через gateway-service.
+
+        Управляющая переменная теста — сценарий.
+        Все данные внешнего мира выбираются через него.
+        ","63","[HTTP] Get user details. User with active credit card account","tests.suites.http","Sat Jun 20 13:04:57 UTC 2026","passed","Sat Jun 20 13:04:57 UTC 2026","TestGatewayHTTP","test_gateway","",""
+"","10","[HTTP][Postgres] Filter by account id. Completed purchase operation","tests.suites.http","Sat Jun 20 13:04:58 UTC 2026","passed","Sat Jun 20 13:04:58 UTC 2026","TestOperationsHTTP","test_operations","",""
+"","555","[HTTP][Kafka] Operation events. In progress purchase operation","tests.suites.http","Sat Jun 20 13:04:57 UTC 2026","passed","Sat Jun 20 13:04:58 UTC 2026","TestOperationsHTTP","test_operations","",""

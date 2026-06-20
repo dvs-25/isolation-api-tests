@@ -1,0 +1,22 @@
+INFO     sqlalchemy.engine.Engine:base.py:2698 BEGIN (implicit)
+INFO     sqlalchemy.engine.Engine:base.py:1842 INSERT INTO operations (id, type, status, amount, user_id, card_id, account_id, category, created_at) VALUES (%(id)s::UUID, %(type)s, %(status)s, %(amount)s, %(user_id)s::UUID, %(card_id)s::UUID, %(account_id)s::UUID, %(category)s, %(created_at)s)
+INFO     sqlalchemy.engine.Engine:base.py:1842 [cached since 0.8037s ago] {'id': UUID('a075f294-21ff-41b9-a1fa-e6c0371e8889'), 'type': <OperationTestType.PURCHASE: 'PURCHASE'>, 'status': <OperationTestStatus.IN_PROGRESS: 'IN_PROGRESS'>, 'amount': 208.6, 'user_id': UUID('df42d9cd-46ed-41a1-abb0-3d2ab8591de9'), 'card_id': UUID('57cc6ba1-9935-4f38-b47c-2d06c8f347e6'), 'account_id': UUID('c3198d85-ea16-4bc1-a7f6-d647dfdf5950'), 'category': 'restaurants', 'created_at': datetime.datetime(1977, 12, 29, 0, 34, 52, 315344)}
+INFO     sqlalchemy.engine.Engine:base.py:1842 SELECT operations.id, operations.type, operations.status, operations.amount, operations.user_id, operations.card_id, operations.account_id, operations.category, operations.created_at 
+FROM operations 
+WHERE operations.id = %(pk_1)s::UUID
+INFO     sqlalchemy.engine.Engine:base.py:1842 [cached since 0.8013s ago] {'pk_1': UUID('a075f294-21ff-41b9-a1fa-e6c0371e8889')}
+INFO     sqlalchemy.engine.Engine:base.py:2704 COMMIT
+INFO     OPERATIONS_HTTP_TEST_CLIENT:logger_event_hook.py:35 GET http://127.0.0.1:8002/api/v1/operations?userId=df42d9cd-46ed-41a1-abb0-3d2ab8591de9&cardId=57cc6ba1-9935-4f38-b47c-2d06c8f347e6 - Waiting for response
+INFO     OPERATIONS_HTTP_TEST_CLIENT:logger_event_hook.py:45 GET http://127.0.0.1:8002/api/v1/operations?userId=df42d9cd-46ed-41a1-abb0-3d2ab8591de9&cardId=57cc6ba1-9935-4f38-b47c-2d06c8f347e6 - Status 200
+INFO     OPERATIONS_ASSERTIONS:operations.py:78 Check get operations response from models
+INFO     BASE_ASSERTIONS:base.py:27 Check that "operations count" equals to 1
+INFO     OPERATIONS_ASSERTIONS:operations.py:43 Check operation from model
+INFO     BASE_ASSERTIONS:base.py:27 Check that "id" equals to a075f294-21ff-41b9-a1fa-e6c0371e8889
+INFO     BASE_ASSERTIONS:base.py:27 Check that "type" equals to PURCHASE
+INFO     BASE_ASSERTIONS:base.py:27 Check that "status" equals to IN_PROGRESS
+INFO     BASE_ASSERTIONS:base.py:27 Check that "amount" equals to 208.6
+INFO     BASE_ASSERTIONS:base.py:27 Check that "user_id" equals to df42d9cd-46ed-41a1-abb0-3d2ab8591de9
+INFO     BASE_ASSERTIONS:base.py:27 Check that "card_id" equals to 57cc6ba1-9935-4f38-b47c-2d06c8f347e6
+INFO     BASE_ASSERTIONS:base.py:27 Check that "category" equals to restaurants
+INFO     BASE_ASSERTIONS:base.py:27 Check that "created_at" equals to 1977-12-29 00:34:52.315344
+INFO     BASE_ASSERTIONS:base.py:27 Check that "account_id" equals to c3198d85-ea16-4bc1-a7f6-d647dfdf5950
