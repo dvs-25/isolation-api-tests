@@ -8,7 +8,7 @@
       "status": "ACTIVE",
       "accountId": "aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee",
       "cardNumber": "4111111111111111",
-      "cardHolder": "IVAN PETROV",
+      "cardHolder": "ANNA IVANOVA",
       "expiryDate": "2027-12-31",
       "paymentSystem": "VISA"
     },
@@ -20,7 +20,7 @@
       "status": "ACTIVE",
       "accountId": "aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee",
       "cardNumber": "5500000000000004",
-      "cardHolder": "IVAN PETROV",
+      "cardHolder": "ANNA IVANOVA",
       "expiryDate": "2028-06-30",
       "paymentSystem": "MASTERCARD"
     }
