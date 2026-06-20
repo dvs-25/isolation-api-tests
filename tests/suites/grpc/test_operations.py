@@ -73,3 +73,16 @@ class TestOperationsGRPC:
         )
 
         assert_get_operations_response_from_models(response, [model])
+
+    @allure.tag(AllureTag.GRPC, AllureTag.KAFKA, AllureTag.OPERATIONS_SERVICE)
+    @allure.story(AllureStory.OPERATION_EVENTS)
+    @allure.title("[gRPC][Kafka] Operation events. Completed purchase operation")
+    def test_operation_events_completed_purchase_operation(
+            self,
+            operations_grpc_test_client: OperationsGRPCTestClient,
+            operations_kafka_producer_test_client: OperationsKafkaProducerTestClient
+    ):
+        event = operations_kafka_producer_test_client.produce_completed_purchase_operation_event()
+        response = operations_grpc_test_client.get_operations(user_id=event.user_id)
+
+        assert_get_operations_response_from_events(response, [event])
